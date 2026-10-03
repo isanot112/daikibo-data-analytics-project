@@ -1,0 +1,77 @@
+# Deloitte Australia Data Analytics Job Simulation
+
+## Project Overview
+This project was completed as part of the Deloitte Australia Data Analytics Job Simulation on Forage.
+
+The project involved analysing operational telemetry data and compensation equality data for Daikibo Industrials.
+
+## Objectives
+
+The analysis focused on two major business areas:
+
+### 1. Factory Machine Downtime Analysis
+Daikibo collected telemetry data from four factories:
+
+- Daikibo Factory Meiyo – Tokyo, Japan
+- Daikibo Factory Seiko – Osaka, Japan
+- Daikibo Berlin – Berlin, Germany
+- Daikibo Shenzhen – Shenzhen, China
+
+The objective was to answer:
+
+- Which factory experienced the most machine downtime?
+- Which device types experienced the most downtime within that factory?
+
+Each machine sent telemetry information every 10 minutes. An unhealthy status was therefore treated as 10 minutes of potential downtime.
+
+### 2. Gender Pay Equality Analysis
+Daikibo also requested an investigation into potential gender pay inequality across factories and job roles.
+
+Equality scores ranged from -100 to +100, with 0 representing ideal equality.
+
+Scores were classified as:
+
+- Fair: -10 to +10
+- Unfair: -20 to -11 and +11 to +20
+- Highly Discriminative: below -20 or above +20
+
+## Tools Used
+
+- Microsoft Excel
+- PivotTables
+- PivotCharts
+- Excel formulas
+- Data cleaning
+- Data transformation
+- Dashboard design
+- JSON data processing
+
+## Key Findings
+
+### Machine Downtime
+
+The factory with the highest potential downtime was:
+
+**Daikibo Factory Seiko – 480 minutes**
+
+The device type responsible for the highest downtime at this factory was:
+
+**LaserWelder – 480 minutes**
+
+Other factory downtime totals included:
+
+| Factory | Downtime |
+|---|---:|
+| Daikibo Factory Seiko | 480 minutes |
+| Daikibo Shenzhen | 420 minutes |
+| Daikibo Factory Meiyo | 110 minutes |
+| Daikibo Berlin | 20 minutes |
+
+### Gender Pay Equality
+
+The equality score was transformed into an Equality Class using Excel.
+
+Formula used:
+
+```excel
+=IF(ABS(C2)<=10,"Fair",IF(ABS(C2)<=20,"Unfair","Highly Discriminative"))
